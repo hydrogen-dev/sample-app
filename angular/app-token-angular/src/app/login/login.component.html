@@ -1,0 +1,46 @@
+<div class="wrapper">
+    <main>
+    <div class="container-fluid">
+        <div class="row min-h-screen">
+        <div class="form-wrapper d-flex flex-column align-items-center col-lg-5 pt-5">
+            <form  class="form" [formGroup]="form" (ngSubmit)="onSubmit()" >
+            <h1><a href="https://www.hydrogenplatform.com"><img src="https://www.hydrogenplatform.com/svg/logo-blue.svg" alt="Hydrogen"></a></h1>
+            <h2>Login to Hydrogen</h2>
+                <p class="slogan">Great to see you back! Log in to your account below.</p>
+                
+                <label class="d-flex flex-column mb-3">
+                <span >Enter your email</span>
+                <input type="email" placeholder="" name="email" class="w-100" formControlName="username" required>
+                <div *ngIf="form.controls['username'].errors?.required" class="text-danger">
+                    Please enter username
+                  </div>
+                  <div *ngIf="form.controls['username'].errors?.email" class="text-danger">
+                    Please enter valid email
+                  </div>
+                </label>
+                <label class="d-flex flex-column mb-5">
+                <div class="label d-flex justify-content-between">
+                    <span>Password</span>
+                
+                </div>
+                <input type="password" name="password" placeholder="" class="w-100" formControlName="password" required>
+                <div *ngIf="form.controls['password'].errors?.required" class="text-danger">
+                    Please enter password
+                  </div>
+                </label>
+                <p *ngIf="loginInvalid" class="text-danger">
+                    Invalid username or password
+                </p>
+                <button id="userLogin" name="userLogin" class="btn btn-primary w-100 mb-4" >Log in</button>
+            
+            </form>
+            </div>
+  
+            <div class="img-wrapper d-flex col-lg-7 flex-column justify-content-center align-items-center">
+              <div id="app"></div>
+            </div>
+  
+        </div>
+    </div>
+    </main>
+  </div>
