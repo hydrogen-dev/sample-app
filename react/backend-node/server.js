@@ -57,9 +57,14 @@ app.get('/app_token/generate', (req, res) => {
       res.json(data);
     }
   }
+
+  const appArray = app_name.map(app => {
+    return {'app_name':app, 'auth_type': app==='card_issuance'?'client_credentials' : 'password_credentials'}
+  })
+
   let attribMap = [{"name" : "public-key", "value" : process.env.PUBLIC_KEY}]
   let appTokenConfig = {};
-  appTokenConfig['appName'] = app_name
+  appTokenConfig['appName'] = appArray
   appTokenConfig['userAccessToken'] = userAuthToken
   appTokenConfig['attribMap'] = attribMap
   appTokenConfig['isEmbed'] = true
