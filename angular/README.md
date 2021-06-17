@@ -14,6 +14,20 @@ Post-Login
 1. Card Balance
 2. Card Transactions
 
+## Setup
+
+1. Navigate to the [.env file](https://github.com/hydrogen-dev/sample-app/blob/master/angular/backend-node/.env) in the `backend-node` folder
+2. Update the following fields:
+```shell
+TENANT_NAME={YOUR OAUTH CLIENT_ID}
+TENANT_PASSWORD={YOUR OAUTH CLIENT_SECRET}
+PUBLIC_KEY={YOUR PUBLIC KEY}
+BASE_PATH=https://api.hydrogenplatform.com/admin/v1
+```
+You can find your credentials on the "API Keys & Whitelists" link on the header of the account portal.
+
+3. To test components post-login that use the `PASSWORD` OAuth grant, you will need to create a username and password in the admin user service. Please read [our docs here](https://www.hydrogenplatform.com/docs/nucleus/v1/#Create-a-client-in-admin).
+
 ## Installation
 
 Open the command line, and following the instructions below.
