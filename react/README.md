@@ -2,17 +2,32 @@
 
 Learn how to embed Hydrogen Card Components using React and Node.
 
-## Requirements
+## Documentation
+Read our guides below to become more familiar with how our components are authenticated and embedded in this app.
+
+[Web Component Guide](https://www.hydrogenplatform.com/docs/no-code-quickstart#web-components)
+
+[Authentication Guide](https://www.hydrogenplatform.com/docs/atom-quickstart#authentication)
+
+## Technical Requirements
 [Node.js](https://nodejs.org/)
 
-## Components
+## Web Components
 
-Pre-Login
+The following [Hydrogen Web Components](https://www.hydrogenplatform.com/cards-no-code-applications) are used in the sample app.
+
+**Pre-Login**
+
 1. Card Issuance
 
-Post-Login
+Uses the `client_credentials` OAuth grant type to issue a card for a brand new client that hasn't yet been created. If you wish to issue a card for a client that has already been signed up, you can either pass in a Nucleus `client-id` to the embed code, or embed post-login using the `password` grant type below.
+
+**Post-Login**
+
 1. Card Balance
 2. Card Transactions
+
+Uses the `password` OAuth grant type to only pull in balance and transaction data for the authenticated cardholder.
 
 ## Setup
 
