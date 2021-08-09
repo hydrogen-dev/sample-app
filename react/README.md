@@ -41,11 +41,11 @@ BASE_PATH=https://api.hydrogenplatform.com/admin/v1
 ```
 You can find your credentials on the "API Keys & Whitelists" link on the header of the account portal.
 
-3. To test components post-login that use the `PASSWORD` OAuth grant, you will need to create a username and password in the admin user service. Please read [our docs here](https://www.hydrogenplatform.com/docs/nucleus/v1/#Create-a-client-in-admin).
+3. To test components post-login that use the `password` OAuth grant, you will need to create a username and password in the admin user service. Please read [our docs here](https://www.hydrogenplatform.com/docs/nucleus/v1/#Create-a-client-in-admin).
 
 ## Installation
 
-Open the command line, and following the instructions below.
+Open the command line, and follow the instructions below.
 
 1. Navigate to the `node-sdk` folder and then run the following command:
 
