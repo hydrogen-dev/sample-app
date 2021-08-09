@@ -53,9 +53,10 @@ Open the command line, and follow the instructions below.
 sudo npm link
 ```
 
-2. Navigate out of the current folder to the `app-token-react` folder, and run the following command:
+2. Navigate out of the current folder to the `app-token-react` folder, and run the following commands:
 
 ```shell
+sudo npm install
 sudo npm start
 ```
 
@@ -68,4 +69,4 @@ sudo npm link ../node-sdk
 node server.js
 ```
 
-The backend Node server should now be running with a message `Server is listening on port 3005`
+The backend Node server should now be running with a message `Server is listening on port 3005`. If you refresh the browser page now, you should see the Card Issuance component display, which means the backend is running and you have authenticated the app!
