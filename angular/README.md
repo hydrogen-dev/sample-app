@@ -10,7 +10,7 @@ Read our guides below to become more familiar with how our components are authen
 [Authentication Guide](https://www.hydrogenplatform.com/docs/atom-quickstart#authentication)
 
 ## Technical Requirements
-[Node.js](https://nodejs.org/)
+[Node.js](https://nodejs.org/) Compatible with <= v14.17.4
 
 ## Web Components
 
