@@ -10,7 +10,10 @@ Read our guides below to become more familiar with how our components are authen
 [Authentication Guide](https://www.hydrogenplatform.com/docs/atom-quickstart#authentication)
 
 ## Technical Requirements
-[Node.js](https://nodejs.org/) Compatible with <= v14.17.4
+1. [Node.js](https://nodejs.org/) Compatible with <= v14.17.4
+2. [IP & Domain Whitelist](https://support.hydrogenplatform.com/hc/en-us/articles/1500007613761-How-does-the-API-whitelisting-work-)
+
+**You must run the app on a real domain that you can whitelist on the Hydrogen portal in #2 above (localhost cannot be whitelisted), otherwise you will receive CORS Access-Control errors on the components. If you do wish to run the app locally, the app will still generate tokens and embed the components, as well as allow you to login.**
 
 ## Web Components
 
@@ -53,9 +56,10 @@ Open the command line, and following the instructions below.
 sudo npm link
 ```
 
-2. Navigate out of the current folder to the `app-token-angular` folder, and run the following command:
+2. Navigate out of the current folder to the `app-token-angular` folder, and run the following commands:
 
 ```shell
+sudo npm install
 sudo ng serve
 ```
 
@@ -74,4 +78,4 @@ sudo npm link ../node-sdk
 node server.js
 ```
 
-The backend Node server should now be running with a message `Server is listening on port 3005`
+The backend Node server should now be running with a message `Server is listening on port 3005`. If you refresh the browser window now, you should see the Card Issuance component display.
