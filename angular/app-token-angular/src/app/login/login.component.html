@@ -9,14 +9,17 @@
                 <p class="slogan">Great to see you back! Log in to your account below.</p>
                 
                 <label class="d-flex flex-column mb-3">
-                <span >Enter your email</span>
+                <span class="label">Enter your email</span>
                 <input type="email" placeholder="" name="email" class="w-100" formControlName="username" required>
-                <div *ngIf="form.controls['username'].errors?.required" class="text-danger">
+                <div *ngIf="form.controls['username'].invalid && (form.controls['username'].dirty || form.controls['username'].touched)">
+                  <span *ngIf="form.controls['username'].errors?.required" class="text-danger">
                     Please enter username
-                  </div>
-                  <div *ngIf="form.controls['username'].errors?.email" class="text-danger">
+                  </span>
+                  <span *ngIf="form.controls['username'].errors?.email" class="text-danger">
                     Please enter valid email
-                  </div>
+                  </span>
+              </div>
+                
                 </label>
                 <label class="d-flex flex-column mb-5">
                 <div class="label d-flex justify-content-between">
@@ -24,9 +27,12 @@
                 
                 </div>
                 <input type="password" name="password" placeholder="" class="w-100" formControlName="password" required>
-                <div *ngIf="form.controls['password'].errors?.required" class="text-danger">
+                <div *ngIf="form.controls['password'].invalid && (form.controls['password'].dirty || form.controls['password'].touched)">
+                  <div *ngIf="form.controls['password'].errors?.required" class="text-danger">
                     Please enter password
                   </div>
+              </div>
+                
                 </label>
                 <p *ngIf="loginInvalid" class="text-danger">
                     Invalid username or password

@@ -7,7 +7,8 @@ export default class Login extends React.Component {
             appToken : [],
             username : '',
             password : '',
-            userToken : ''
+            userToken : '',
+            errors: {}
         };
     }
     
@@ -22,9 +23,26 @@ export default class Login extends React.Component {
     }
     
     handleClick = (e) => {
-
+      let errors = {};
       let username = this.state.username;
       let password = this.state.password;
+
+      if (!username) {
+        errors["username"] = "*Please enter your username.";
+        this.setState({
+            errors: errors
+          });
+        return false;
+      }
+
+      if (!password) {
+        errors["password"] = "*Please enter your password.";
+        this.setState({
+            errors: errors
+          });
+        return false;
+      }
+
       const formData = {user_name : username, password : password}
       axios.post("http://localhost:3005/user/login", formData).then(response => {
               if(response.data && response.status === 200){
@@ -58,9 +76,10 @@ export default class Login extends React.Component {
                                 <p class="slogan">Great to see you back! Log in to your account below.</p>
                                 
                                 <label class="d-flex flex-column mb-3">
-                                <span >Enter your email</span>
+                                <span style={{"text-align": "left"}}>Enter your email</span>
                                 <input type="email" placeholder="" name="email" class="w-100" required="" value={this.state.username}
                                     onChange={this.handleChangeUsername}></input>
+                                 <div className="text-danger" style={{"text-align": "left"}}>{this.state.errors.username}</div>
                                 </label>
                                 <label class="d-flex flex-column mb-5">
                                 <div class="label d-flex justify-content-between">
@@ -69,6 +88,7 @@ export default class Login extends React.Component {
                                 </div>
                                 <input type="password" name="password" placeholder="" class="w-100" required="" value={this.state.password}
                                     onChange={this.handleChangePassword}></input>
+                                <div className="text-danger" style={{"text-align": "left"}}>{this.state.errors.password}</div>
                                 </label>
                             
                                 <p type="text" id="userLogin" name="userLogin" class="btn btn-primary w-100 mb-4" onClick={this.handleClick}>Log in</p>
