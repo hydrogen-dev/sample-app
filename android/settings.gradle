@@ -1,0 +1,3 @@
+include ':card_modules'
+include ':app'
+rootProject.name = "Cards"
