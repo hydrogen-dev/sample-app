@@ -12,4 +12,4 @@ val appKey="your authenticated app-token"
 ```
 The sample app will display the Card Issuance by default. To change modules
 1. In file `MainActivity` (app -> java -> com.hydrogenplatform.cards -> MainActivity) change line 5 import `import com.hydrogenplatform.card_modules.Issuance` to e.g. `import com.hydrogenplatform.card_modules.Balance` and also change line 8 `private lateinit var cardIssuance:Issuance` to `private lateinit var cardIssuance:Balance`
-2. In file `activity_main.xml` (app -> res -> layout -> activity_main.xml) change module e.g. from `com.hydrogenplatform.card_modules.Issuance` to `com.hydrogenplatform.card_modules.Balance`
+2. In file `activity_main.xml` (app -> res -> layout -> activity_main.xml) change line 10 in the "Code" view e.g. from `com.hydrogenplatform.card_modules.Issuance` to `com.hydrogenplatform.card_modules.Balance`
