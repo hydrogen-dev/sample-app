@@ -16,6 +16,6 @@ class MainActivity : AppCompatActivity() {
         val publicKey="your publicKey"
         val appKey="your appKey"
 
-        cardIssuance.showComponent(publicKey,appKey, "")
+        cardIssuance.showComponent(publicKey,appKey)
     }
 }
