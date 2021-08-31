@@ -2,20 +2,56 @@ package com.hydrogenplatform.cards
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.hydrogenplatform.card_modules.Balance
+import android.util.Log
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+
+import com.github.kittinunf.fuel.Fuel
+import com.github.kittinunf.fuel.core.Headers
+import com.github.kittinunf.result.Result
+import com.github.kittinunf.fuel.gson.responseObject
+
+data class TokenResponse(var access_token:String = "")
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var cardIssuance: Balance
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
 
-        cardIssuance = findViewById(R.id.issuance)
+        val email = findViewById<EditText>(R.id.email)
+        val password = findViewById<EditText>(R.id.password)
+        val loginButton = findViewById<Button>(R.id.loginButton)
 
-        val publicKey="your publicKey"
-        val appKey="your appKey"
+        loginButton.setOnClickListener {
 
-        cardIssuance.showComponent(publicKey,appKey)
+            val emailValue = email.text.toString()
+            val passwordValue = password.text.toString()
+            val publicKey = "lmdo8mwkd3kurgc8otos1ykz6a"
+            val aggregationAccountId = "a6a762d0-77cf-48a3-9cb4-9df94023dbe6"
+
+            val creds = okhttp3.Credentials.basic("TestUser", "tugxwe6irx9hjjln8wr1hgm6x7")
+
+
+
+            Fuel.post("https://sandbox.hydrogenplatform.com/authorization/v1/oauth/token?grant_type=password&username=${emailValue}&password=${passwordValue}")
+                .header(Headers.AUTHORIZATION, creds)
+                .responseObject<TokenResponse> { _, _, res ->
+                    when (res) {
+                        is Result.Failure -> {
+                            val ex = res.getException()
+                            Toast.makeText(this, "fail3, ${ex}", Toast.LENGTH_LONG).show()
+                        }
+                        is Result.Success -> {
+                            val userToken = res.get().access_token
+                            setContentView(R.layout.modules_main)
+                            // Log.i("TOKEN", userToken.toString())
+                        }
+                    }
+                }
+        }
+
     }
 }
