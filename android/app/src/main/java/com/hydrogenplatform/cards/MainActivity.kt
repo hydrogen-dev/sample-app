@@ -11,6 +11,8 @@ import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.Headers
 import com.github.kittinunf.result.Result
 import com.github.kittinunf.fuel.gson.responseObject
+import android.content.Intent
+
 
 data class TokenResponse(var access_token:String = "")
 
@@ -46,8 +48,15 @@ class MainActivity : AppCompatActivity() {
                         }
                         is Result.Success -> {
                             val userToken = res.get().access_token
-                            setContentView(R.layout.modules_main)
-                            // Log.i("TOKEN", userToken.toString())
+
+                            Log.i("TOKEN", userToken)
+
+                            val intent = Intent(this, ModulesActivity::class.java)
+
+                            intent.putExtra(ModulesActivity.TOKEN, userToken);
+//
+                            startActivity(intent)
+
                         }
                     }
                 }

@@ -2,5 +2,5 @@
 <resources>
     <string name="baseUrl">https://www.hydrogenplatform.com/</string>
     <string name="cdnUrl">https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.5.1/custom-elements-es5-adapter.js</string>
-    <string name="scripUrl">https://cards.hydrogenplatform.com/bundle-web-components.js</string>
+    <string name="scripUrl">https://cards.sandbox.hydrogenplatform.com/bundle-web-components.js</string>
 </resources>
