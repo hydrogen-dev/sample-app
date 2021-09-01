@@ -1,34 +1,29 @@
 package com.hydrogenplatform.cards
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-
 import android.util.Log
 import android.widget.Toast
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.Headers
 import com.github.kittinunf.fuel.gson.responseObject
 import com.github.kittinunf.result.Result
-import com.hydrogenplatform.card_modules.Balance
 
 data class AppResponse(var app_token:String = "")
 
-class ModulesActivity : AppCompatActivity() {
-
-    private lateinit var cardIssuance: Balance
-
+class ModulesActivity : CardModules() {
     companion object {
         const val TOKEN = "token"
     }
 
-    private fun sendGet(appName: String, token: String, cb: (appToken: String) -> Unit): String {
+    private var constants = Constants()
+    private val envLink = constants.envLink
+    private val publicKey = constants.publicKey
 
-        val token =
-            "Bearer $token"
+    private fun sendGet(appName: String, token: String, publicKey: String): String {
 
-        Log.i("BEA", token)
+        val token = "Bearer $token"
 
-        Fuel.get("https://sandbox.hydrogenplatform.com/admin/v1/app_token?app_name=$appName")
+        Fuel.get("${envLink}/admin/v1/app_token?app_name=$appName")
             .header(
                 Headers.AUTHORIZATION,
                 token
@@ -46,15 +41,13 @@ class ModulesActivity : AppCompatActivity() {
                     is Result.Success -> {
                         Log.i("RR", "dsad")
                         val data = result.get()[0]
-                        cb(data.app_token)
-
+                        makeVisible(appName);
+                        showComponent(appName, publicKey, data.app_token)
                     }
                 }
             }
 
         return ""
-
-
     }
 
 
@@ -62,26 +55,19 @@ class ModulesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.modules_main)
 
-        cardIssuance = findViewById(R.id.issuance)
+        initializeModules()
 
         val userToken = intent.getStringExtra(TOKEN);
-        val publicKey = "lmdo8mwkd3kurgc8otos1ykz6a"
 
-        Log.i("CHECK", userToken.toString())
-
-
-        if (userToken != null) {
-            sendGet(
-                "card_balance",
-                userToken
-            ) { appToken ->
-                cardIssuance.showComponent(
-                    publicKey,
-                    appToken,
+        for(moduleName in MODULES_NAMES){
+            if (userToken != null) {
+                sendGet(
+                    moduleName,
+                    userToken,
+                    publicKey
                 )
             }
         }
-
     }
 }
 
