@@ -1,6 +1,6 @@
-# React Web Component Demo
+# Vue Web Component Demo
 
-Learn how to embed Hydrogen Card Components using React and Node.
+Learn how to embed Hydrogen Card Components using Vue and Node.
 
 ## Documentation
 Read our guides below to become more familiar with how our components are authenticated and embedded in this app.
