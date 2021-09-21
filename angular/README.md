@@ -40,7 +40,7 @@ Uses the `password` OAuth grant type to only pull in balance and transaction dat
 TENANT_NAME={YOUR OAUTH CLIENT_ID}
 TENANT_PASSWORD={YOUR OAUTH CLIENT_SECRET}
 PUBLIC_KEY={YOUR PUBLIC KEY}
-BASE_PATH=https://api.hydrogenplatform.com/admin/v1
+BASE_PATH=https://api.hydrogenplatform.com/component/v1
 ```
 You can find your credentials on the "API Keys & Whitelists" link on the header of the account portal.
 
