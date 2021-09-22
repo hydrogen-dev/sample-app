@@ -63,7 +63,7 @@ sudo npm install
 sudo npm start
 ```
 
-Your browser should open at `http://localhost:4200/` with a Login screen displayed. The frontend React app is now running.
+Your browser should open at `http://localhost:7029/` with a Login screen displayed. The frontend React app is now running.
 
 3. Finally, we will run the backend app. Open a new tab. Then navigate out of the current folder to the `backend-node` folder, and run the following commands:
 

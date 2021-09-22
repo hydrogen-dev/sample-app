@@ -60,10 +60,10 @@ sudo npm link
 
 ```shell
 sudo npm install http-server -g
-http-server .
+http-server . -p 7029
 ```
 
-Your browser should open at `http://localhost:8080/` with a Login screen displayed.
+Your browser should open at `http://localhost:7029/` with a Login screen displayed.
 
 3. Finally, we will run the backend app. Open a new tab. Then navigate out of the current folder to the `backend-node` folder, and run the following commands:
 

@@ -65,7 +65,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "app-token:build"
+            "browserTarget": "app-token:build",
+            "port": 7029
           },
           "configurations": {
             "production": {
