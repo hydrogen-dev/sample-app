@@ -52,6 +52,45 @@
     <script src="https://www.hydrogenplatform.com/js/main.js"></script>
     <script src="https://cards.hydrogenplatform.com/bundle-web-components.js"></script>
     <script>
+
+        function handleClick(){
+            var username = $('#email').val();
+            var password = $('#password').val();
+
+            if (!username) {
+                $('#username_error').html("*Please enter your username.");
+                return false;
+            }else{
+                $('#username_error').html("");
+            }
+
+            if (!password) {
+                $('#password_error').html("*Please enter your password.");
+                return false;
+            }else{
+                $('#password_error').html("")
+            }
+
+            const formData = {user_name : username, password : password}
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:3005/user/login",
+                data : formData,
+                cache: false,
+                success: function(response){
+                    console.log(response);
+                    if(response){
+                        var userToken = response? response.access_token : null
+                        console.log(userToken);
+                        if(userToken){
+                            sessionStorage.setItem("user_token", userToken);
+                            window.location = "/dashboard.html";
+                        }
+                    }
+                    
+                }
+            });
+        }
         $(function() {
             $.ajax({
                 type: "GET",
