@@ -1,0 +1,18 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.data {
+  margin: 1vh;
+  width: 20vh;
+  text-align: center;
+  font-size: 2vh;
+}
+.button {
+  width: 15vh;
+  height: 5vh;
+  font-size: 1.5vh;
+}

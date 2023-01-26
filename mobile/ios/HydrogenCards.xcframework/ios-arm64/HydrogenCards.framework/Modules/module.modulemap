@@ -1,0 +1,11 @@
+framework module HydrogenCards {
+  umbrella header "HydrogenCards.h"
+
+  export *
+  module * { export * }
+}
+
+module HydrogenCards.Swift {
+    header "HydrogenCards-Swift.h"
+    requires objc
+}

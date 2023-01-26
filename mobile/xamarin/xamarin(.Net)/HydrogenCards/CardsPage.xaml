@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="HydrogenCards.CardsPage"
+    xmlns:hydrogen ="clr-namespace:CardNet;assembly=CardNet"
+    xmlns:local="clr-namespace:HydrogenCards"
+    >
+
+    <ContentPage.BindingContext>
+        <local:PickerItems></local:PickerItems>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <Grid Margin="0,50,5,0" Padding="0,0,0,40">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Picker ItemDisplayBinding="{Binding CardName}" x:Name="CardsPicker" Title="Balance" ItemsSource="{Binding CardsList}" Grid.Row="0" SelectedIndexChanged="onCardNameChange"/>
+            <hydrogen:CardView x:Name="hydroitem" IsVisible="true" HeightRequest="200" Grid.Row="1" />
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

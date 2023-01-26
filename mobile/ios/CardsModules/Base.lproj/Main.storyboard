@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6EG-Jq-luO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="WwB-OL-kTR">
+            <objects>
+                <viewController id="6EG-Jq-luO" customClass="LoginViewController" customModule="CardsModules" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nAn-BA-U5z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yku-ro-eZW">
+                                <rect key="frame" x="172" y="433" width="70" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="B33-Q6-ugY"/>
+                                </constraints>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLoginPress:" destination="6EG-Jq-luO" eventType="touchUpInside" id="6wJ-8V-cyd"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eAi-N7-F1Q">
+                                <rect key="frame" x="106" y="384" width="202" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="Zb9-4x-l6I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fwn-Ct-hRT">
+                                <rect key="frame" x="106" y="342" width="202" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="wNH-HD-nlB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DrW-qx-kIr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fwn-Ct-hRT" firstAttribute="centerX" secondItem="nAn-BA-U5z" secondAttribute="centerX" id="1tu-uF-eit"/>
+                            <constraint firstItem="yku-ro-eZW" firstAttribute="top" secondItem="fwn-Ct-hRT" secondAttribute="bottom" constant="57" id="7VH-F3-AKi"/>
+                            <constraint firstItem="yku-ro-eZW" firstAttribute="centerX" secondItem="nAn-BA-U5z" secondAttribute="centerX" id="93G-D0-Eds"/>
+                            <constraint firstItem="yku-ro-eZW" firstAttribute="top" secondItem="eAi-N7-F1Q" secondAttribute="bottom" constant="15" id="Rzx-zv-gnn"/>
+                            <constraint firstItem="eAi-N7-F1Q" firstAttribute="centerX" secondItem="nAn-BA-U5z" secondAttribute="centerX" id="Zo6-ej-Z3q"/>
+                            <constraint firstItem="yku-ro-eZW" firstAttribute="centerY" secondItem="nAn-BA-U5z" secondAttribute="centerY" id="vCq-o9-S9K"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginBtn" destination="yku-ro-eZW" id="cTU-Ku-G8g"/>
+                        <outlet property="loginTF" destination="fwn-Ct-hRT" id="uiI-OX-fwj"/>
+                        <outlet property="passwordTF" destination="eAi-N7-F1Q" id="trI-rC-Peb"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="WidgetSelect" modalPresentationStyle="fullScreen" id="AL7-Rh-YwS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSj-BC-RMB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-891.304347826087" y="101.78571428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CardsModules" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCi-aQ-FDg" customClass="BalanceView" customModule="HydrogenCards">
+                                <rect key="frame" x="0.0" y="158" width="414" height="674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHm-vA-vMT" customClass="FundingView" customModule="HydrogenCards">
+                                <rect key="frame" x="30" y="158" width="354" height="684"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NfY-OV-JzP" customClass="AdminView" customModule="HydrogenCards">
+                                <rect key="frame" x="20" y="158" width="374" height="684"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6I-3v-8Hd" customClass="ActivationView" customModule="HydrogenCards">
+                                <rect key="frame" x="20" y="158" width="374" height="684"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eZJ-fr-6SY" customClass="ControlsView" customModule="HydrogenCards">
+                                <rect key="frame" x="20" y="158" width="374" height="684"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqG-t1-PeZ" userLabel="Rewards" customClass="RewardsView" customModule="HydrogenCards">
+                                <rect key="frame" x="20" y="158" width="374" height="684"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aG-ZL-NuX" customClass="ImageView" customModule="HydrogenCards">
+                                <rect key="frame" x="20" y="158" width="374" height="684"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FEE-xM-ikN" customClass="IssuanceView" customModule="HydrogenCards">
+                                <rect key="frame" x="20" y="158" width="374" height="684"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CjI-vt-8QS" customClass="SpendingView" customModule="HydrogenCards">
+                                <rect key="frame" x="0.0" y="158" width="414" height="684"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5VI-av-p1I" customClass="StatementsView" customModule="HydrogenCards">
+                                <rect key="frame" x="20" y="158" width="374" height="684"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ob0-Tv-9x9" customClass="TransactionsView" customModule="HydrogenCards">
+                                <rect key="frame" x="20" y="158" width="374" height="684"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZgW-yu-U8f" userLabel="CashFlow" customClass="CashFlowView" customModule="HydrogenCards">
+                                <rect key="frame" x="20" y="158" width="374" height="684"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Znd-7C-hN1" userLabel="Budget" customClass="BudgetView" customModule="HydrogenCards">
+                                <rect key="frame" x="20" y="158" width="374" height="684"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select widget" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QtD-Mz-hHg" customClass="DropDown" customModule="iOSDropDown">
+                                <rect key="frame" x="30" y="84" width="354" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="rowBackgroundColor">
+                                        <color key="value" systemColor="systemGray5Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemGreenColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5Y-h9-Pnh">
+                                <rect key="frame" x="313" y="53" width="71" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Mpo-yg-6F7"/>
+                                    <constraint firstAttribute="width" constant="71" id="o7i-lq-fQ7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                                <connections>
+                                    <action selector="closeModal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kzF-Mb-01t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZgW-yu-U8f" secondAttribute="trailing" constant="20" id="0gF-hR-fON"/>
+                            <constraint firstItem="ZgW-yu-U8f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1tt-ox-TYe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F6I-3v-8Hd" secondAttribute="bottom" constant="20" id="27D-VQ-vqS"/>
+                            <constraint firstItem="Znd-7C-hN1" firstAttribute="top" secondItem="QtD-Mz-hHg" secondAttribute="bottom" constant="40" id="2Ij-GJ-Wmm"/>
+                            <constraint firstItem="1aG-ZL-NuX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="54d-oV-LsD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1aG-ZL-NuX" secondAttribute="trailing" constant="20" id="5bH-cf-Yz2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jqG-t1-PeZ" secondAttribute="bottom" constant="20" id="7ir-jP-Wr6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1aG-ZL-NuX" secondAttribute="bottom" constant="20" id="9BT-LC-Har"/>
+                            <constraint firstItem="F6I-3v-8Hd" firstAttribute="top" secondItem="QtD-Mz-hHg" secondAttribute="bottom" constant="40" id="AU3-P7-vBJ"/>
+                            <constraint firstItem="jqG-t1-PeZ" firstAttribute="top" secondItem="QtD-Mz-hHg" secondAttribute="bottom" constant="40" id="Bz1-Ve-l6D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CjI-vt-8QS" secondAttribute="trailing" id="FBJ-eE-FOX"/>
+                            <constraint firstItem="eZJ-fr-6SY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GPT-j5-gGK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5VI-av-p1I" secondAttribute="trailing" constant="20" id="JB9-cM-mC0"/>
+                            <constraint firstItem="Ob0-Tv-9x9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="M3d-TY-SLt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FEE-xM-ikN" secondAttribute="bottom" constant="20" id="N83-jx-qQv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jqG-t1-PeZ" secondAttribute="trailing" constant="20" id="NaI-C0-kl5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GCi-aQ-FDg" secondAttribute="bottom" constant="30" id="NeM-4e-FFm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Znd-7C-hN1" secondAttribute="trailing" constant="20" id="O4X-V3-9pa"/>
+                            <constraint firstItem="S5Y-h9-Pnh" firstAttribute="bottom" secondItem="QtD-Mz-hHg" secondAttribute="top" id="OwK-FS-Mgb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gHm-vA-vMT" secondAttribute="trailing" constant="30" id="PK5-9K-TzE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5VI-av-p1I" secondAttribute="bottom" constant="20" id="PpF-HA-2w2"/>
+                            <constraint firstItem="gHm-vA-vMT" firstAttribute="top" secondItem="QtD-Mz-hHg" secondAttribute="bottom" constant="40" id="SKV-Dc-0Cn"/>
+                            <constraint firstItem="ZgW-yu-U8f" firstAttribute="top" secondItem="QtD-Mz-hHg" secondAttribute="bottom" constant="40" id="T6X-l4-yhG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CjI-vt-8QS" secondAttribute="bottom" constant="20" id="TrD-ik-faD"/>
+                            <constraint firstItem="Ob0-Tv-9x9" firstAttribute="top" secondItem="QtD-Mz-hHg" secondAttribute="bottom" constant="40" id="Ves-c8-3QD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ob0-Tv-9x9" secondAttribute="trailing" constant="20" id="Vte-e0-WtN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZgW-yu-U8f" secondAttribute="bottom" constant="20" id="WmU-3F-tdz"/>
+                            <constraint firstItem="eZJ-fr-6SY" firstAttribute="top" secondItem="QtD-Mz-hHg" secondAttribute="bottom" constant="40" id="XMQ-IS-9wn"/>
+                            <constraint firstItem="FEE-xM-ikN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="YXL-Qx-GNH"/>
+                            <constraint firstItem="NfY-OV-JzP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Z4r-G2-c1r"/>
+                            <constraint firstItem="1aG-ZL-NuX" firstAttribute="top" secondItem="QtD-Mz-hHg" secondAttribute="bottom" constant="40" id="ZCy-DT-rGZ"/>
+                            <constraint firstItem="gHm-vA-vMT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="aFA-Eq-93Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NfY-OV-JzP" secondAttribute="trailing" constant="20" id="aYA-Mx-3SL"/>
+                            <constraint firstItem="QtD-Mz-hHg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="bRh-m2-3q4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ob0-Tv-9x9" secondAttribute="bottom" constant="20" id="cdY-BH-Si3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Znd-7C-hN1" secondAttribute="bottom" constant="20" id="dYz-UB-45d"/>
+                            <constraint firstItem="Znd-7C-hN1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="egt-IA-bxN"/>
+                            <constraint firstItem="5VI-av-p1I" firstAttribute="top" secondItem="QtD-Mz-hHg" secondAttribute="bottom" constant="40" id="ezc-y7-xFS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F6I-3v-8Hd" secondAttribute="trailing" constant="20" id="fgF-VA-1gY"/>
+                            <constraint firstItem="5VI-av-p1I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gYF-b5-sHb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FEE-xM-ikN" secondAttribute="trailing" constant="20" id="hMN-lv-lF7"/>
+                            <constraint firstItem="S5Y-h9-Pnh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-30" id="i1x-XQ-ew3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eZJ-fr-6SY" secondAttribute="trailing" constant="20" id="iLY-kL-fXt"/>
+                            <constraint firstItem="CjI-vt-8QS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ki3-5v-vXZ"/>
+                            <constraint firstItem="NfY-OV-JzP" firstAttribute="top" secondItem="QtD-Mz-hHg" secondAttribute="bottom" constant="40" id="lHS-jU-TqA"/>
+                            <constraint firstItem="GCi-aQ-FDg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lKu-jo-n6i"/>
+                            <constraint firstItem="GCi-aQ-FDg" firstAttribute="top" secondItem="QtD-Mz-hHg" secondAttribute="bottom" constant="40" id="mGu-Nk-muH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gHm-vA-vMT" secondAttribute="bottom" constant="20" id="mRP-Ob-eNX"/>
+                            <constraint firstItem="FEE-xM-ikN" firstAttribute="top" secondItem="QtD-Mz-hHg" secondAttribute="bottom" constant="40" id="oTu-Kz-rkL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NfY-OV-JzP" secondAttribute="bottom" constant="20" id="pLw-BM-VmV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QtD-Mz-hHg" secondAttribute="trailing" constant="30" id="pOZ-7h-8tp"/>
+                            <constraint firstItem="jqG-t1-PeZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pfH-sd-u8D"/>
+                            <constraint firstItem="QtD-Mz-hHg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="qNt-Q9-VW4"/>
+                            <constraint firstItem="F6I-3v-8Hd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qeH-s9-Ksw"/>
+                            <constraint firstItem="GCi-aQ-FDg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uxc-Uo-dtQ"/>
+                            <constraint firstItem="CjI-vt-8QS" firstAttribute="top" secondItem="QtD-Mz-hHg" secondAttribute="bottom" constant="40" id="xcg-TL-HAJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eZJ-fr-6SY" secondAttribute="bottom" constant="20" id="ybk-9e-uMk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AqQ-zG-Gey"/>
+                    <connections>
+                        <outlet property="activation" destination="F6I-3v-8Hd" id="uaA-K0-UbT"/>
+                        <outlet property="admin" destination="NfY-OV-JzP" id="iyg-Qg-DYX"/>
+                        <outlet property="balance" destination="GCi-aQ-FDg" id="ELc-oa-Qh4"/>
+                        <outlet property="budget" destination="Znd-7C-hN1" id="dkW-cu-boN"/>
+                        <outlet property="cashFlow" destination="ZgW-yu-U8f" id="qA8-BK-UlN"/>
+                        <outlet property="closeButton" destination="S5Y-h9-Pnh" id="gd5-Tu-ByR"/>
+                        <outlet property="controls" destination="eZJ-fr-6SY" id="zeO-NO-1I3"/>
+                        <outlet property="dropDown" destination="QtD-Mz-hHg" id="aVq-N2-z58"/>
+                        <outlet property="funding" destination="gHm-vA-vMT" id="8ul-3g-8Hk"/>
+                        <outlet property="image" destination="1aG-ZL-NuX" id="sfA-Rm-p8a"/>
+                        <outlet property="issuance" destination="FEE-xM-ikN" id="prQ-PW-IrN"/>
+                        <outlet property="rewards" destination="jqG-t1-PeZ" id="46E-pn-ibc"/>
+                        <outlet property="spending" destination="CjI-vt-8QS" id="Hlx-av-7LX"/>
+                        <outlet property="statements" destination="5VI-av-p1I" id="Ij2-Zv-6Dz"/>
+                        <outlet property="transactions" destination="Ob0-Tv-9x9" id="0GJ-TB-P6T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.623188405797109" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

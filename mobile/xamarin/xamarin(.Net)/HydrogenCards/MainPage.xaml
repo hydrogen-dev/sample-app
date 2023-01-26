@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HydrogenCards.MainPage"
+           >
+
+    <StackLayout Padding="20" Spacing="10" VerticalOptions="Center">
+        <Entry Placeholder="Login" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" x:Name="User" />
+        <Entry Placeholder="Password"  VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" x:Name="Password" IsPassword="True" />
+        <Button Text="Log In" VerticalOptions="End" AbsoluteLayout.LayoutFlags="PositionProportional" Clicked="OnButtonClicked"/>
+
+    </StackLayout>
+
+</ContentPage>

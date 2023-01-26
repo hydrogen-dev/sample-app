@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydrogen.binding", "Hydrogen.binding.csproj", "{4A4F0A9F-31FC-4701-AA4D-A2089BB441F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hydrogen", "hydrogen\hydrogen.csproj", "{2E36E5C3-815C-4382-BB4D-FACB2787E88D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A4F0A9F-31FC-4701-AA4D-A2089BB441F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A4F0A9F-31FC-4701-AA4D-A2089BB441F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A4F0A9F-31FC-4701-AA4D-A2089BB441F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A4F0A9F-31FC-4701-AA4D-A2089BB441F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E36E5C3-815C-4382-BB4D-FACB2787E88D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E36E5C3-815C-4382-BB4D-FACB2787E88D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E36E5C3-815C-4382-BB4D-FACB2787E88D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E36E5C3-815C-4382-BB4D-FACB2787E88D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DFEE83AA-ABC1-47E7-9704-2AC6B7389424}
+	EndGlobalSection
+EndGlobal

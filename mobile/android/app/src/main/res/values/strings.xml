@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Cards</string>
+
+    <string name="default_module_name">Balance</string>
+
+    <string-array name="modules_names">
+        <item>Balance</item>
+        <item>Activation</item>
+        <item>Controls</item>
+        <item>Funding</item>
+        <item>Image</item>
+        <item>Issuance</item>
+        <item>Spending</item>
+        <item>Statements</item>
+        <item>Transactions</item>
+        <item>Admin</item>
+        <item>Budget</item>
+        <item>Cash Flow</item>
+        <item>Rewards</item>
+    </string-array>
+</resources>

@@ -1,0 +1,70 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name HydrogenCards
+@_exported import HydrogenCards
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class BudgetView : HydrogenCards.HydroWebview {
+  @_Concurrency.MainActor(unsafe) public func showContent(publicKey: Swift.String, appToken: Swift.String, env: Swift.String = "")
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class StatementsView : HydrogenCards.HydroWebview {
+  @_Concurrency.MainActor(unsafe) public func showContent(publicKey: Swift.String, appToken: Swift.String, cardId: Swift.String = "", env: Swift.String = "")
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SpendingView : HydrogenCards.HydroWebview {
+  @_Concurrency.MainActor(unsafe) public func showContent(publicKey: Swift.String, appToken: Swift.String, cardId: Swift.String = "", env: Swift.String = "")
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ImageView : HydrogenCards.HydroWebview {
+  @_Concurrency.MainActor(unsafe) public func showContent(publicKey: Swift.String, appToken: Swift.String, cardId: Swift.String = "", env: Swift.String = "")
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class BalanceView : HydrogenCards.HydroWebview {
+  @_Concurrency.MainActor(unsafe) public func showContent(publicKey: Swift.String, appToken: Swift.String, cardId: Swift.String = "", env: Swift.String = "")
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CashFlowView : HydrogenCards.HydroWebview {
+  @_Concurrency.MainActor(unsafe) public func showContent(publicKey: Swift.String, appToken: Swift.String, env: Swift.String = "")
+  @objc deinit
+}
+public struct ModulesConstants {
+  public var bundleLink: Swift.String
+  public var scriptVersion: Swift.String
+  public let baseUrl: Foundation.URL?
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ControlsView : HydrogenCards.HydroWebview {
+  @_Concurrency.MainActor(unsafe) public func showContent(publicKey: Swift.String, appToken: Swift.String, cardId: Swift.String = "", env: Swift.String = "")
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class RewardsView : HydrogenCards.HydroWebview {
+  @_Concurrency.MainActor(unsafe) public func showContent(publicKey: Swift.String, appToken: Swift.String, cardId: Swift.String = "", clientId: Swift.String = "", env: Swift.String = "")
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class TransactionsView : HydrogenCards.HydroWebview {
+  @_Concurrency.MainActor(unsafe) public func showContent(publicKey: Swift.String, appToken: Swift.String, cardId: Swift.String = "", env: Swift.String = "")
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ActivationView : HydrogenCards.HydroWebview {
+  @_Concurrency.MainActor(unsafe) public func showContent(publicKey: Swift.String, appToken: Swift.String, cardId: Swift.String = "", env: Swift.String = "")
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AdminView : HydrogenCards.HydroWebview {
+  @_Concurrency.MainActor(unsafe) public func showContent(publicKey: Swift.String, appToken: Swift.String, env: Swift.String = "")
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class FundingView : HydrogenCards.HydroWebview {
+  @_Concurrency.MainActor(unsafe) public func showContent(publicKey: Swift.String, appToken: Swift.String, cardId: Swift.String = "", env: Swift.String = "")
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class IssuanceView : HydrogenCards.HydroWebview {
+  @_Concurrency.MainActor(unsafe) public func showContent(publicKey: Swift.String, appToken: Swift.String, cardId: Swift.String = "", clientId: Swift.String = "", env: Swift.String = "")
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class HydroWebview : UIKit.UIView, WebKit.WKUIDelegate {
+  @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, createWebViewWith configuration: WebKit.WKWebViewConfiguration, for navigationAction: WebKit.WKNavigationAction, windowFeatures: WebKit.WKWindowFeatures) -> WebKit.WKWebView?
+  @_Concurrency.MainActor(unsafe) public func showWebView(modulName: Swift.String, publicKey: Swift.String, appToken: Swift.String, cardId: Swift.String = "", clientId: Swift.String = "", env: Swift.String = "")
+  @objc deinit
+}

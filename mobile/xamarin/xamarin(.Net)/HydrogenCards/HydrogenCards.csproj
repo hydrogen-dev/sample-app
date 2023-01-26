@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.709238" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
+    <PackageReference Include="jose-jwt" Version="3.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="CardNet" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="SimpleHttpListener.Rx" />
+    <None Remove="EmbedIO" />
+    <None Remove="Portable.BouncyCastle" />
+    <None Remove="jose-jwt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="CardNet">
+      <HintPath>..\..\..\bindingLibrary%28.Net%29\CardNet.dll</HintPath>
+    </Reference>
+    <Reference Include="CardNet">
+      <HintPath>..\..\..\..\..\..\Desktop\xamarin bullshit\CardNet.dll</HintPath>
+    </Reference>
+    <Reference Include="CardNet">
+      <HintPath>..\..\..\..\..\..\Desktop\xamarin bullshit\publish\CardNet.dll</HintPath>
+    </Reference>
+    <Reference Include="CardNet">
+      <HintPath>..\..\..\..\..\..\Desktop\xamarin bullshit\CardNet\CardNet.dll</HintPath>
+    </Reference>
+    <Reference Include="CardNet">
+      <HintPath>..\..\..\..\..\Desktop\publish ebablish\CardNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

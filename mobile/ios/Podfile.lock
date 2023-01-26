@@ -1,0 +1,56 @@
+PODS:
+  - Alamofire (5.4.3)
+  - BlueCryptor (1.0.32)
+  - BlueECC (1.2.5)
+  - BlueRSA (1.0.200)
+  - HydrogenCards (0.1.0)
+  - iOSDropDown (0.3.4)
+  - KituraContracts (1.2.1):
+    - LoggerAPI (~> 1.7)
+  - LoggerAPI (1.9.200):
+    - Logging (~> 1.1)
+  - Logging (1.4.0)
+  - SwiftJWT (3.6.200):
+    - BlueCryptor (~> 1.0)
+    - BlueECC (~> 1.1)
+    - BlueRSA (~> 1.0)
+    - KituraContracts (~> 1.2)
+    - LoggerAPI (~> 1.7)
+
+DEPENDENCIES:
+  - Alamofire
+  - HydrogenCards (from `./`)
+  - iOSDropDown
+  - SwiftJWT
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - BlueCryptor
+    - BlueECC
+    - BlueRSA
+    - iOSDropDown
+    - KituraContracts
+    - LoggerAPI
+    - Logging
+    - SwiftJWT
+
+EXTERNAL SOURCES:
+  HydrogenCards:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  BlueCryptor: b0aee3d9b8f367b49b30de11cda90e1735571c24
+  BlueECC: 0d18e93347d3ec6d41416de21c1ffa4d4cd3c2cc
+  BlueRSA: dfeef51db96bcc4edec654956c1581adbda4e6a3
+  HydrogenCards: 96d841b5a53190cbb3a37378a11d219ba045dd32
+  iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
+  KituraContracts: e845e60dc8627ad0a76fa55ef20a45451d8f830b
+  LoggerAPI: ad9c4a6f1e32f518fdb43a1347ac14d765ab5e3d
+  Logging: beeb016c9c80cf77042d62e83495816847ef108b
+  SwiftJWT: 88c412708f58c169d431d344c87bc79a87c830ae
+
+PODFILE CHECKSUM: d68b754098a0ff6512575fbd4f50ef038afabc80
+
+COCOAPODS: 1.11.2

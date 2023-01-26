@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="baseUrl">https://www.hydrogenplatform.com/</string>
+    <string name="cdnUrl">https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.5.1/custom-elements-es5-adapter.js</string>
+    <string name="scripUrlProd">https://cards.hydrogenplatform.com/bundle-web-components.js</string>
+    <string name="scripUrlSandbox">https://cards.sandbox.hydrogenplatform.com/bundle-web-components.js</string>
+</resources>

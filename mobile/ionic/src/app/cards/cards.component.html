@@ -1,0 +1,61 @@
+<ion-app id="app">
+  <ion-content [fullscreen]="true">
+    <ion-item id="select" *ngIf="ios">
+      <ion-select
+        value="{{ defaultValue }}"
+        placeholder="Select component"
+        [(ngModel)]="selectedOption"
+        (ionChange)="onChange($event)"
+      >
+        <ion-select-option value="card_activation"
+          >Activation</ion-select-option
+        >
+        <ion-select-option value="card_admin">Admin</ion-select-option>
+        <ion-select-option value="card_balance">Balance</ion-select-option>
+        <ion-select-option value="card_controls">Controls</ion-select-option>
+        <ion-select-option value="card_funding">Funding</ion-select-option>
+        <ion-select-option value="card_image">Image</ion-select-option>
+        <ion-select-option value="card_issuance">Issuance</ion-select-option>
+        <ion-select-option value="card_spending">Spending</ion-select-option>
+        <ion-select-option value="card_statements"
+          >Statements</ion-select-option
+        >
+        <ion-select-option value="card_transactions"
+          >Transactions</ion-select-option
+        >
+        <ion-select-option value="card_budget">Budget</ion-select-option>
+        <ion-select-option value="card_cash_flow">Cash Flow</ion-select-option>
+        <ion-select-option value="card_rewards">Cash Rewards</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item *ngIf="!ios">
+      <ion-select
+        value="{{ defaultValue }}"
+        placeholder="Select component"
+        [(ngModel)]="selectedOption"
+        (ionChange)="onChange($event)"
+      >
+        <ion-select-option value="card_activation"
+          >Activation</ion-select-option
+        >
+        <ion-select-option value="card_admin">Admin</ion-select-option>
+        <ion-select-option value="card_balance">Balance</ion-select-option>
+        <ion-select-option value="card_controls">Controls</ion-select-option>
+        <ion-select-option value="card_funding">Funding</ion-select-option>
+        <ion-select-option value="card_image">Image</ion-select-option>
+        <ion-select-option value="card_issuance">Issuance</ion-select-option>
+        <ion-select-option value="card_spending">Spending</ion-select-option>
+        <ion-select-option value="card_statements"
+          >Statements</ion-select-option
+        >
+        <ion-select-option value="card_transactions"
+          >Transactions</ion-select-option
+        >
+        <ion-select-option value="card_budget">Budget</ion-select-option>
+        <ion-select-option value="card_cash_flow">Cash Flow</ion-select-option>
+        <ion-select-option value="card_rewards">Cash Rewards</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <iframe id="iFrame" frameBorder="0" [srcdoc]="card"></iframe>
+  </ion-content>
+</ion-app>
